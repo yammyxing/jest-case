@@ -5,6 +5,7 @@ specifiers:
   jest: 27.5.1
   jest-environment-jsdom-global: 3.0.0
   jest-location-mock: 1.0.9
+  jest-mock-console: ^1.2.3
   ts-jest: 27.1.4
   typescript: 4.6.3
 
@@ -13,10 +14,33 @@ devDependencies:
   jest: registry.npmmirror.com/jest/27.5.1
   jest-environment-jsdom-global: registry.npmmirror.com/jest-environment-jsdom-global/3.0.0
   jest-location-mock: registry.npmmirror.com/jest-location-mock/1.0.9
+  jest-mock-console: 1.2.3_jest@27.5.1
   ts-jest: registry.npmmirror.com/ts-jest/27.1.4_9985e1834e803358b7be1e6ce5ca0eea
   typescript: registry.npmmirror.com/typescript/4.6.3
 
 packages:
+
+  /fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /jest-mock-console/1.2.3_jest@27.5.1:
+    resolution: {integrity: sha512-q4jfuHW3V3tYzwtKTF6nxjRNriUC2/D2SVfxW88lNeG1qO1mVarBUqgOAvZjTEmxuTsjzGlHQsDIgvlOZaLccg==}
+    peerDependencies:
+      jest: '>= 22.4.2'
+    dependencies:
+      jest: registry.npmmirror.com/jest/27.5.1
+    dev: true
+
+  /source-map/0.6.1:
+    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
+    engines: {node: '>=0.10.0'}
+    dev: true
+    optional: true
 
   registry.nlark.com/concat-map/0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/concat-map/download/concat-map-0.0.1.tgz}
@@ -1426,7 +1450,7 @@ packages:
       esutils: registry.npmmirror.com/esutils/2.0.3
       optionator: registry.npmmirror.com/optionator/0.8.3
     optionalDependencies:
-      source-map: registry.npmmirror.com/source-map/0.6.1
+      source-map: 0.6.1
     dev: true
 
   registry.npmmirror.com/esprima/4.0.1:
@@ -1542,16 +1566,6 @@ packages:
     name: fs.realpath
     version: 1.0.0
     dev: true
-
-  registry.npmmirror.com/fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
-    name: fsevents
-    version: 2.3.2
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   registry.npmmirror.com/function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/function-bind/-/function-bind-1.1.1.tgz}
@@ -2058,7 +2072,7 @@ packages:
       micromatch: registry.npmmirror.com/micromatch/4.0.5
       walker: registry.npmmirror.com/walker/1.0.8
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   registry.npmmirror.com/jest-jasmine2/27.5.1:
