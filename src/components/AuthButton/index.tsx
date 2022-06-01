@@ -28,7 +28,7 @@ const AuthButton: FC<Props> = (props) => {
 
     return (
         <Button {...restProps} className={classNames(className, styles.authButton)}>
-            {mapper[userType!] || ''}
+            {mapper[userType!] ? mapper[userType!] + ',' : ''} 
             {children}
         </Button>
     )
