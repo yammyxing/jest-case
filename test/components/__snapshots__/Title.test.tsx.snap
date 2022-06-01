@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title component should render large title 1`] = `
+<div>
+  hello large
+</div>
+`;
+
+exports[`Title component should render small title 1`] = `
+<div>
+  hello small
+</div>
+`;
