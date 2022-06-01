@@ -1,15 +1,16 @@
 import React from 'react';
-import axios from 'axios';
 import { render, screen } from '@testing-library/react'
 import AuthButton from '@/components/AuthButton'
+import * as userUtils from 'apis/user';
+import { AxiosResponse } from 'axios'
 
 describe('AuthButton mock axios', () => {
     it('should display plain user content', async () => {
-        jest.spyOn(axios, 'get').mockResolvedValueOnce({
+        jest.spyOn(userUtils, 'getUserRole').mockResolvedValueOnce({
             data: {
                 userType: 'user',
             }
-        })
+        } as AxiosResponse)
 
         render(<AuthButton>hello</AuthButton>)
 
@@ -17,11 +18,11 @@ describe('AuthButton mock axios', () => {
     })
 
     it('should display admin user content', async () => {
-        jest.spyOn(axios, 'get').mockResolvedValueOnce({
+        jest.spyOn(userUtils, 'getUserRole').mockResolvedValueOnce({
             data: {
                 userType: 'admin',
             }
-        })
+        } as AxiosResponse)
 
         render(<AuthButton>hello</AuthButton>)
 
