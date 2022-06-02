@@ -1,1 +1,1 @@
-export const getEnv = () => 'test'
+export const env = 'test'

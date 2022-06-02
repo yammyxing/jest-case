@@ -1,15 +1,30 @@
 import * as envUtils from 'utils/env';
 
-describe('env', () => {
-    it('should be dev env', () => {
-        jest.spyOn(envUtils, 'getEnv').mockReturnValue('dev');
+const originalEnv = envUtils.env;
 
-        expect(envUtils.getEnv()).toEqual('dev');
+describe('env', () => {
+    afterEach(() => {
+        Object.defineProperty(envUtils, 'env', {
+            value: originalEnv,
+            writable: true
+        })
+    })
+    
+    it('should be dev env', () => {
+        Object.defineProperty(envUtils, 'env', {
+            value: 'dev',
+            writable: true
+        })
+
+        expect(envUtils.env).toEqual('dev');
     })
 
     it('should be prod env', () => {
-        jest.spyOn(envUtils, 'getEnv').mockReturnValue('prod');
+        Object.defineProperty(envUtils, 'env', {
+            value: 'prod',
+            writable: true
+        })
 
-        expect(envUtils.getEnv()).toEqual('prod');
+        expect(envUtils.env).toEqual('prod');
     })
 })
