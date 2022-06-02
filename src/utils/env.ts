@@ -1,3 +1,1 @@
-export const config = {
-    get env() { return 'test' }
-}
+export const getEnv = () => 'test'

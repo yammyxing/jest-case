@@ -1,15 +1,15 @@
-import { config } from 'utils/env';
+import * as envUtils from 'utils/env';
 
 describe('env', () => {
     it('should be dev env', () => {
-        jest.spyOn(config, 'env', 'get').mockReturnValue('dev');
+        jest.spyOn(envUtils, 'getEnv').mockReturnValue('dev');
 
-        expect(config.env).toEqual('dev');
+        expect(envUtils.getEnv()).toEqual('dev');
     })
 
     it('should be prod env', () => {
-        jest.spyOn(config, 'env', 'get').mockReturnValue('prod');
+        jest.spyOn(envUtils, 'getEnv').mockReturnValue('prod');
 
-        expect(config.env).toEqual('prod');
+        expect(envUtils.getEnv()).toEqual('prod');
     })
 })
