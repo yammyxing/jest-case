@@ -2,14 +2,14 @@ import { config } from 'utils/env';
 
 describe('env', () => {
     it('should be dev env', () => {
-        jest.spyOn(config, 'getEnv').mockReturnValue('dev');
+        jest.spyOn(config, 'env', 'get').mockReturnValue('dev');
 
-        expect(config.getEnv()).toEqual('dev');
+        expect(config.env).toEqual('dev');
     })
 
     it('should be prod env', () => {
-        jest.spyOn(config, 'getEnv').mockReturnValue('prod');
+        jest.spyOn(config, 'env', 'get').mockReturnValue('prod');
 
-        expect(config.getEnv()).toEqual('prod');
+        expect(config.env).toEqual('prod');
     })
 })

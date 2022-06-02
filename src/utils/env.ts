@@ -1,5 +1,3 @@
 export const config = {
-    getEnv() {
-        return 'test'
-    }
+    get env() { return 'test' }
 }
