@@ -2,8 +2,10 @@ lockfileVersion: 5.3
 
 specifiers:
   '@reduxjs/toolkit': 1.8.1
+  '@testing-library/dom': ^8.13.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 12.1.4
+  '@testing-library/user-event': 14.1.0
   '@types/jest': 27.4.1
   '@types/react': 17.0.2
   '@types/react-dom': 17.0.2
@@ -47,8 +49,10 @@ dependencies:
   redux: 4.2.0
 
 devDependencies:
+  '@testing-library/dom': 8.13.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
+  '@testing-library/user-event': 14.1.0_@testing-library+dom@8.13.0
   '@types/jest': registry.npmmirror.com/@types/jest/27.4.1
   '@types/react': 17.0.2
   '@types/react-dom': 17.0.2
@@ -324,6 +328,15 @@ packages:
       '@types/react-dom': 17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+    dev: true
+
+  /@testing-library/user-event/14.1.0_@testing-library+dom@8.13.0:
+    resolution: {integrity: sha512-+CGfMXlVM+OwREHDEsfTGsXIMI+rjr3a7YBUSutq7soELht+8kQrM5k46xa/WLfHdtX/wqsDIleL6bi4i+xz0w==}
+    engines: {node: '>=12', npm: '>=6'}
+    peerDependencies:
+      '@testing-library/dom': '>=7.21.4'
+    dependencies:
+      '@testing-library/dom': 8.13.0
     dev: true
 
   /@tootallnate/once/1.1.2:
