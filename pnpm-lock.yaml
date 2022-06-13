@@ -7,6 +7,7 @@ specifiers:
   '@types/jest': 27.4.1
   '@types/react': 17.0.2
   '@types/react-dom': 17.0.2
+  '@types/redux-mock-store': 1.0.3
   antd: 4.19.5
   axios: 0.26.1
   classnames: 2.3.1
@@ -25,6 +26,8 @@ specifiers:
   react-dom: 17.0.2
   react-redux: 8.0.1
   redux: 4.2.0
+  redux-mock-store: 1.5.4
+  redux-thunk: ^2.4.1
   style-loader: 3.3.1
   ts-jest: 27.1.4
   ts-loader: 9.2.8
@@ -49,6 +52,7 @@ devDependencies:
   '@types/jest': registry.npmmirror.com/@types/jest/27.4.1
   '@types/react': 17.0.2
   '@types/react-dom': 17.0.2
+  '@types/redux-mock-store': 1.0.3
   css-loader: 6.7.1_webpack@5.72.0
   html-webpack-plugin: 5.5.0_webpack@5.72.0
   jest: registry.npmmirror.com/jest/27.5.1
@@ -60,6 +64,8 @@ devDependencies:
   less: 4.1.2
   less-loader: 10.2.0_less@4.1.2+webpack@5.72.0
   msw: 0.39.2
+  redux-mock-store: 1.5.4
+  redux-thunk: 2.4.1_redux@4.2.0
   style-loader: 3.3.1_webpack@5.72.0
   ts-jest: registry.npmmirror.com/ts-jest/27.1.4_9985e1834e803358b7be1e6ce5ca0eea
   ts-loader: 9.2.8_typescript@4.6.3+webpack@5.72.0
@@ -472,6 +478,12 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.5
       csstype: 3.1.0
+
+  /@types/redux-mock-store/1.0.3:
+    resolution: {integrity: sha512-Wqe3tJa6x9MxMN4DJnMfZoBRBRak1XTPklqj4qkVm5VBpZnC8PSADf4kLuFQ9NAdHaowfWoEeUMz7NWc2GMtnA==}
+    dependencies:
+      redux: 4.2.0
+    dev: true
 
   /@types/retry/0.12.0:
     resolution: {integrity: sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==}
@@ -2478,6 +2490,10 @@ packages:
       p-locate: 4.1.0
     dev: true
 
+  /lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
+    dev: true
+
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
@@ -3702,19 +3718,23 @@ packages:
       strip-indent: 3.0.0
     dev: true
 
+  /redux-mock-store/1.5.4:
+    resolution: {integrity: sha512-xmcA0O/tjCLXhh9Fuiq6pMrJCwFRaouA8436zcikdIpYWWCjU76CRk+i2bHx8EeiSiMGnB85/lZdU3wIJVXHTA==}
+    dependencies:
+      lodash.isplainobject: 4.0.6
+    dev: true
+
   /redux-thunk/2.4.1_redux@4.2.0:
     resolution: {integrity: sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q==}
     peerDependencies:
       redux: ^4
     dependencies:
       redux: 4.2.0
-    dev: false
 
   /redux/4.2.0:
     resolution: {integrity: sha512-oSBmcKKIuIR4ME29/AeNUnl5L+hvBq7OaJWzaptTQJAntaPvxIJqfnjbaEiCzzaIz+XmVILfqAM3Ob0aXLPfjA==}
     dependencies:
       '@babel/runtime': 7.18.3
-    dev: false
 
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
