@@ -12,6 +12,8 @@
   "author": "yammyxing <yammy7chris@gmail.com> (https://yammyxing.github.io/)",
   "license": "MIT",
   "devDependencies": {
+    "@swc/core": "1.2.165",
+    "@swc/jest": "0.2.20",
     "@testing-library/dom": "^8.13.0",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.4",
