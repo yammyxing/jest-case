@@ -5,6 +5,7 @@ specifiers:
   '@testing-library/dom': ^8.13.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 12.1.4
+  '@testing-library/react-hooks': 8.0.0
   '@testing-library/user-event': 14.1.0
   '@types/jest': 27.4.1
   '@types/react': 17.0.2
@@ -52,6 +53,7 @@ devDependencies:
   '@testing-library/dom': 8.13.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
+  '@testing-library/react-hooks': 8.0.0_0607d8bab5983684f0a746a30ac1a448
   '@testing-library/user-event': 14.1.0_@testing-library+dom@8.13.0
   '@types/jest': registry.npmmirror.com/@types/jest/27.4.1
   '@types/react': 17.0.2
@@ -314,6 +316,29 @@ packages:
       dom-accessibility-api: 0.5.14
       lodash: 4.17.21
       redent: 3.0.0
+    dev: true
+
+  /@testing-library/react-hooks/8.0.0_0607d8bab5983684f0a746a30ac1a448:
+    resolution: {integrity: sha512-uZqcgtcUUtw7Z9N32W13qQhVAD+Xki2hxbTR461MKax8T6Jr8nsUvZB+vcBTkzY2nFvsUet434CsgF0ncW2yFw==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      '@types/react': ^16.9.0 || ^17.0.0
+      react: ^16.9.0 || ^17.0.0
+      react-dom: ^16.9.0 || ^17.0.0
+      react-test-renderer: ^16.9.0 || ^17.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react-dom:
+        optional: true
+      react-test-renderer:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.18.3
+      '@types/react': 17.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-error-boundary: 3.1.4_react@17.0.2
     dev: true
 
   /@testing-library/react/12.1.4_react-dom@17.0.2+react@17.0.2:
@@ -3633,6 +3658,16 @@ packages:
       react: 17.0.2
       scheduler: 0.20.2
     dev: false
+
+  /react-error-boundary/3.1.4_react@17.0.2:
+    resolution: {integrity: sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      react: '>=16.13.1'
+    dependencies:
+      '@babel/runtime': 7.18.3
+      react: 17.0.2
+    dev: true
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
