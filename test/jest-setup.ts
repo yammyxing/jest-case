@@ -1,6 +1,6 @@
 import "jest-location-mock";
 import mockConsole from "jest-mock-console";
-import '@testing-library/jest-dom'
+import "@testing-library/jest-dom";
 // import server from "./mockServer/server";
 
 // beforeAll(() => {
@@ -18,18 +18,18 @@ import '@testing-library/jest-dom'
 mockConsole();
 
 Object.defineProperty(window, "matchMedia", {
-    writable: true,
-    value: jest.fn().mockImplementation(query => ({
-        matches: false,
-        media: query,
-        onchange: null,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-        addEventListener: jest.fn(),
-        removeEventListener: jest.fn(),
-        dispatchEvent: jest.fn(),
-    }))
-})
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
 
 // jest.spyOn(console, 'log').mockReturnValue();
 // jest.spyOn(console, 'info').mockReturnValue();
@@ -53,4 +53,3 @@ Object.defineProperty(window, "matchMedia", {
 // 		}
 // 	}
 // })
-

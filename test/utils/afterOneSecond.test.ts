@@ -1,20 +1,20 @@
-import afterOneSecond from '@/utils/afterOneSecond';
+import afterOneSecond from "@/utils/afterOneSecond";
 
-describe('afterOneSecond', () => {
-    beforeAll(() => {
-        jest.useFakeTimers();
-    })
-    it('should execute after one second', () => {
-        jest.spyOn(global, 'setTimeout');
-        const callback = jest.fn();
-        expect(callback).not.toHaveBeenCalled();
+describe("afterOneSecond", () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+  });
+  it("should execute after one second", () => {
+    jest.spyOn(global, "setTimeout");
+    const callback = jest.fn();
+    expect(callback).not.toHaveBeenCalled();
 
-        afterOneSecond(callback);
+    afterOneSecond(callback);
 
-        jest.runAllTimers();
+    jest.runAllTimers();
 
-        expect(callback).toHaveBeenCalled;
-        expect(setTimeout).toHaveBeenCalledTimes(1);
-        expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 1000)
-    })
-})
+    expect(callback).toHaveBeenCalled;
+    expect(setTimeout).toHaveBeenCalledTimes(1);
+    expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 1000);
+  });
+});

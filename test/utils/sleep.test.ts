@@ -1,26 +1,26 @@
 import sleep from "@/utils/sleep";
 
 describe("sleep", () => {
-    beforeEach(() => {
-        jest.useFakeTimers();
-    })
-    it("should sleep 1000ms", async () => {
-        const callback = jest.fn();
-        const act = async () => {
-            await sleep(1000);
-            callback();
-        }
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
+  it("should sleep 1000ms", async () => {
+    const callback = jest.fn();
+    const act = async () => {
+      await sleep(1000);
+      callback();
+    };
 
-        const promise = act();
+    const promise = act();
 
-        // act();
+    // act();
 
-        expect(callback).not.toHaveBeenCalled();
+    expect(callback).not.toHaveBeenCalled();
 
-        jest.runAllTimers();
+    jest.runAllTimers();
 
-        await promise;
+    await promise;
 
-        expect(callback).toHaveBeenCalledTimes(1);
-    })
-})
+    expect(callback).toHaveBeenCalledTimes(1);
+  });
+});

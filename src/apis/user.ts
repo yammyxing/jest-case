@@ -1,20 +1,20 @@
-import axios from 'axios';
+import axios from "axios";
 
-export type UserRoleType = 'user' | 'admin';
+export type UserRoleType = "user" | "admin";
 
 export interface GetUserRoleRes {
-    userType: UserRoleType
+  userType: UserRoleType;
 }
 
 export const getUserRole = async () => {
-    return axios.get<GetUserRoleRes>("https://mysite.com/api/role")
-}
+  return axios.get<GetUserRoleRes>("https://mysite.com/api/role");
+};
 
 export interface FetchUserRes {
-    id: string;
-    name: string;
+  id: string;
+  name: string;
 }
 
 export const fetchUser = async () => {
-    return axios.get<FetchUserRes>("https://mysite.com/api/users")
-}
+  return axios.get<FetchUserRes>("https://mysite.com/api/users");
+};

@@ -18,93 +18,93 @@ import React from "react";
 // };
 
 const setup = (initialValue: number) => {
-    const returnValue = {};
+  const returnValue = {};
 
-    const UserCounterTest = () => {
-        const [counter, utils] = useCounter(initialValue);
+  const UserCounterTest = () => {
+    const [counter, utils] = useCounter(initialValue);
 
-        Object.assign(returnValue, {
-            counter,
-            utils
-        })
-        
-        return null;
-    }
+    Object.assign(returnValue, {
+      counter,
+      utils,
+    });
 
-    render(<UserCounterTest />)
+    return null;
+  };
 
-    return returnValue;
-}
+  render(<UserCounterTest />);
 
-describe('useCounter', () => {
-    it('should inc ok', async () => {
-        // render(<UseCounterTest />);
-        
-        // const incBtn = screen.getByText('inc(1)');
-        
-        // await userEvent.click(incBtn);
-        
-        // expect(screen.getByText("Counter: 1")).toBeInTheDocument()
+  return returnValue;
+};
 
-        const useCounterData: any = setup(0);
-        act(() => {
-            useCounterData.utils.inc(1);
-        })
+describe("useCounter", () => {
+  it("should inc ok", async () => {
+    // render(<UseCounterTest />);
 
-        expect(useCounterData.counter).toEqual(1)
-    })
+    // const incBtn = screen.getByText('inc(1)');
 
-    it('should dec ok', async () => {
-        // render(<UseCounterTest />);
+    // await userEvent.click(incBtn);
 
-        // const decBtn = screen.getByText('dec(1)');
+    // expect(screen.getByText("Counter: 1")).toBeInTheDocument()
 
-        // await userEvent.click(decBtn);
+    const useCounterData: any = setup(0);
+    act(() => {
+      useCounterData.utils.inc(1);
+    });
 
-        // expect(screen.getByText("Counter: -1")).toBeInTheDocument()
+    expect(useCounterData.counter).toEqual(1);
+  });
 
-        const useCounterData: any = setup(0);
-        act(() => {
-            useCounterData.utils.dec(1);
-        })
+  it("should dec ok", async () => {
+    // render(<UseCounterTest />);
 
-        expect(useCounterData.counter).toEqual(-1)
-    })
+    // const decBtn = screen.getByText('dec(1)');
 
-    it('should set ok', async () => {
-        // render(<UseCounterTest />);
+    // await userEvent.click(decBtn);
 
-        // const setBtn = screen.getByText('set(10)');
+    // expect(screen.getByText("Counter: -1")).toBeInTheDocument()
 
-        // await userEvent.click(setBtn);
+    const useCounterData: any = setup(0);
+    act(() => {
+      useCounterData.utils.dec(1);
+    });
 
-        // expect(screen.getByText("Counter: 10")).toBeInTheDocument()
+    expect(useCounterData.counter).toEqual(-1);
+  });
 
-        const useCounterData: any = setup(0);
-        act(() => {
-            useCounterData.utils.set(10);
-        })
+  it("should set ok", async () => {
+    // render(<UseCounterTest />);
 
-        expect(useCounterData.counter).toEqual(10)
-    })
+    // const setBtn = screen.getByText('set(10)');
 
-    it('should reset ok', async () => {
-        // render(<UseCounterTest />);
+    // await userEvent.click(setBtn);
 
-        // const incBtn = screen.getByText('inc(1)');
-        // const resetBtn = screen.getByText('reset()');
+    // expect(screen.getByText("Counter: 10")).toBeInTheDocument()
 
-        // await userEvent.click(incBtn);
-        // await userEvent.click(resetBtn);
+    const useCounterData: any = setup(0);
+    act(() => {
+      useCounterData.utils.set(10);
+    });
 
-        // expect(screen.getByText("Counter: 0")).toBeInTheDocument()
+    expect(useCounterData.counter).toEqual(10);
+  });
 
-        const useCounterData: any = setup(0);
-        act(() => {
-            useCounterData.utils.inc(1);
-            useCounterData.utils.reset();
-        })
+  it("should reset ok", async () => {
+    // render(<UseCounterTest />);
 
-        expect(useCounterData.counter).toEqual(0)
-    })
-})
+    // const incBtn = screen.getByText('inc(1)');
+    // const resetBtn = screen.getByText('reset()');
+
+    // await userEvent.click(incBtn);
+    // await userEvent.click(resetBtn);
+
+    // expect(screen.getByText("Counter: 0")).toBeInTheDocument()
+
+    const useCounterData: any = setup(0);
+    act(() => {
+      useCounterData.utils.inc(1);
+      useCounterData.utils.reset();
+    });
+
+    expect(useCounterData.counter).toEqual(0);
+  });
+});
