@@ -15,6 +15,7 @@ specifiers:
   axios: 0.26.1
   classnames: 2.3.1
   css-loader: 6.7.1
+  history: 5.3.0
   html-webpack-plugin: 5.5.0
   jest: 27.5.1
   jest-environment-jsdom: 27.5.1
@@ -28,6 +29,7 @@ specifiers:
   react: 17.0.2
   react-dom: 17.0.2
   react-redux: 8.0.1
+  react-router-dom: 6.3.0
   redux: 4.2.0
   redux-mock-store: 1.5.4
   redux-thunk: ^2.4.1
@@ -44,9 +46,11 @@ dependencies:
   antd: 4.19.5_react-dom@17.0.2+react@17.0.2
   axios: 0.26.1
   classnames: 2.3.1
+  history: 5.3.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-redux: 8.0.1_f0b67d54d09aebca09f335f93ad950f9
+  react-router-dom: 6.3.0_react-dom@17.0.2+react@17.0.2
   redux: 4.2.0
 
 devDependencies:
@@ -1956,6 +1960,12 @@ packages:
     resolution: {integrity: sha512-JoLCAdCEab58+2/yEmSnOlficyHFpIl0XJqwu3l+Unkm1gXpFUYsThz6Yha3D6tNhocWkCPfyW0YVIGWFqTi7w==}
     dev: true
 
+  /history/5.3.0:
+    resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
+    dependencies:
+      '@babel/runtime': 7.18.3
+    dev: false
+
   /hoist-non-react-statics/3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
     dependencies:
@@ -3713,6 +3723,27 @@ packages:
       react-is: 18.1.0
       redux: 4.2.0
       use-sync-external-store: 1.1.0_react@17.0.2
+    dev: false
+
+  /react-router-dom/6.3.0_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      history: 5.3.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-router: 6.3.0_react@17.0.2
+    dev: false
+
+  /react-router/6.3.0_react@17.0.2:
+    resolution: {integrity: sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      history: 5.3.0
+      react: 17.0.2
     dev: false
 
   /react/17.0.2:
